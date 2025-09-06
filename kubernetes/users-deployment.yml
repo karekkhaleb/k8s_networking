@@ -14,8 +14,9 @@ spec:
     spec:
       containers:
         - name: users
-          image: gitikom/kub-demo-users:latest
+          image: gitikom/kub-demo-users
           imagePullPolicy: Always
           env:
             - name: AUTH_ADDRESS
-              value: "10.108.243.165"
+              value: "auth-service.default"
+#              value: "10.108.243.165"
