@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: users-deployment
+  name: auth-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: users
+      app: auth
   template:
     metadata:
       labels:
-        app: users
+        app: auth
     spec:
       containers:
-        - name: users
-          image: gitikom/kub-demo-users:latest
+        - name: auth
+          image: gitikom/kub-demo-auth:latest
           imagePullPolicy: Always
           env:
             - name: AUTH_ADDRESS
-              value: "10.108.243.165"
+              value: localhost
