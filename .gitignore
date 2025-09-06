@@ -1,0 +1,5 @@
+auth-api/node_modules
+tasks-api/node_modules
+users-api/node_modules
+.idea
+.DS_Store
